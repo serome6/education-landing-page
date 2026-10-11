@@ -645,3 +645,342 @@ z-index: 1000;
     flex-direction: row;
   }
 }
+
+
+/* ========================================
+   EDUCONNECT — PREMIUM ANIMATION LAYER
+   Added styles only; existing design stays.
+======================================== */
+
+/* Smooth scrolling between page sections */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+/* Keep anchor targets visible below fixed header */
+#home,
+#about,
+#programs,
+#contact {
+  scroll-margin-top: 85px;
+}
+
+/* Smooth hover transitions */
+a,
+button,
+.flags,
+.stat,
+.aboutimage img,
+.tac i,
+.donate-box {
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Header refinement */
+.header {
+  transition:
+    box-shadow 0.35s ease,
+    background-color 0.35s ease;
+}
+
+.header .content a {
+  transition: color 0.25s ease;
+}
+
+.logo:hover {
+  color: #b7969b;
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #45030d;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #b7969b;
+}
+
+/* Hero entrance animation */
+@keyframes heroEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  animation: heroEntrance 0.85s ease-out both;
+}
+
+.stats .stat {
+  animation: heroEntrance 0.7s ease-out both;
+}
+
+.stats .stat:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.stats .stat:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.stats .stat:nth-child(3) {
+  animation-delay: 0.35s;
+}
+
+.stats .stat:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+/* Main CTA buttons */
+.main-button,
+.nelson button,
+.flash button,
+.menu-icon {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.main-button:hover,
+.nelson button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+}
+
+.main-button:active,
+.nelson button:active,
+.flash button:active,
+.menu-icon:active {
+  transform: scale(0.97);
+}
+
+.main-button:hover {
+  background-color: #f4e8ea;
+}
+
+.flash button {
+  cursor: pointer;
+}
+
+.flash button:hover {
+  background-color: #6a1723;
+  box-shadow: 0 8px 22px rgba(69, 3, 13, 0.2);
+}
+
+/* Statistics cards */
+.stat {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.stat:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.stat .icon {
+  display: inline-block;
+  transition: transform 0.35s ease;
+}
+
+.stat:hover .icon {
+  transform: translateY(-4px) rotate(8deg);
+}
+
+/* About image interaction */
+.aboutimage {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.aboutimage img {
+  will-change: transform;
+}
+
+.aboutimage:hover img {
+  transform: scale(1.035);
+}
+
+/* Program cards */
+.flags {
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.flags:hover {
+  transform: translateY(-7px);
+  border-color: #b7969b;
+  box-shadow: 0 14px 30px rgba(69, 3, 13, 0.1);
+}
+
+.flags i {
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
+}
+
+.flags:hover i {
+  transform: translateY(-4px) scale(1.08);
+  color: #b7969b;
+}
+
+.flags a,
+.don a {
+  display: inline-block;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.flags a:hover,
+.don a:hover {
+  transform: translateX(4px);
+  color: #b7969b;
+}
+
+/* Partnership banner */
+.nelson {
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nelson:hover {
+  box-shadow: 0 12px 28px rgba(69, 3, 13, 0.16);
+}
+
+/* Contact information icons */
+.tac > i {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.tac:hover > i {
+  transform: translateY(-3px);
+  color: #b7969b;
+}
+
+/* Form interaction */
+input,
+textarea {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #b7969b;
+  box-shadow: 0 0 0 4px rgba(183, 150, 155, 0.18);
+  background-color: #fffdfd;
+}
+
+/* Donation card */
+.donate-box {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.donate-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(69, 3, 13, 0.1);
+}
+
+/* Scroll reveal — activated by JavaScript */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js .reveal.reveal-left {
+  transform: translateX(-28px);
+}
+
+.js .reveal.reveal-right {
+  transform: translateX(28px);
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #b7969b;
+  outline-offset: 4px;
+}
+
+/* Mobile refinements */
+@media (max-width: 767px) {
+  .flags:hover {
+    transform: translateY(-3px);
+  }
+
+  .main-button:hover,
+  .nelson button:hover {
+    transform: translateY(-2px);
+  }
+
+  .js .reveal {
+    transition-duration: 0.55s;
+  }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
