@@ -30,6 +30,7 @@ li {
   position: fixed;
   z-index: 1000;
   width: 100%;
+  top: 0%;
 }
 
 .header .content {
@@ -226,11 +227,10 @@ li {
 .flags p {
   margin-top: 20px;
   margin-bottom: 20px;
- display: -webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  
 }
 
 .flags a {
@@ -347,7 +347,7 @@ textarea {
 
 .donate-box {
   margin-top: 20px;
-   padding: 25px 20px;
+  padding: 25px 20px;
   background-color: #b7969b;
   border-radius: 15px;
   display: flex;
@@ -375,7 +375,7 @@ textarea {
 }
 
 .don a {
-  color:#45030d;
+  color: #45030d;
 }
 
 hr {
@@ -645,7 +645,6 @@ z-index: 1000;
     flex-direction: row;
   }
 }
-
 
 /* ========================================
    EDUCONNECT — PREMIUM ANIMATION LAYER
